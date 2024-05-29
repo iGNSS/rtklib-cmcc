@@ -2791,10 +2791,10 @@ extern int decode_rtcm3(rtcm_t *rtcm)
 	int a;
 	trace(3,"decode_rtcm3: len=%3d type=%d\n",rtcm->len,type);
 
-	if (rtcm->outtype&&type==4054) {
+	if (rtcm->outtype&&type==4049) {
 		sprintf(rtcm->cmccmsgtype,"RTCM %4d (%4d):",type,rtcm->len);
 	}
-	else if (rtcm->outtype&&type!=4054) {
+	else if (rtcm->outtype&&type!=4049) {
 		sprintf(rtcm->msgtype,"RTCM %4d (%4d):",type,rtcm->len);
 	}
 
